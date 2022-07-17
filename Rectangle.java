@@ -1,9 +1,10 @@
-import com.shapenaveen.gl.Shape;
-
-public class Rectangle extends Shape {
+public class Rectangle implements IShape {
     int length, width;
+    String color;
+
+    Renderer renderer;
     public Rectangle(String color,int length,int width){
-        super(color);
+        this.color=color;
         this.length=length;
         this.width=width;
     }
@@ -13,7 +14,5 @@ public class Rectangle extends Shape {
     public double calculatePerimeter(){
         return 2*(this.length+this.width);
     }
-    public void display(){
-        System.out.println("this is a" +super.color + " " + "rectangle");
-    }
+
 }

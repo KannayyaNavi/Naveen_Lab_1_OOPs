@@ -1,11 +1,10 @@
 
-import com.shapenaveen.gl.Shape;
-
-public class Circle extends Shape {
+public class Circle implements IShape {
     int radius;
+    String color;
     final double pi=3.14;
     public Circle(String color, int radius){
-        super(color);
+        this.color=color;
         this.radius=radius;
     }
     public double calculateArea(){
@@ -14,7 +13,5 @@ public class Circle extends Shape {
     public double calculatePerimeter(){
         return 2*pi*this.radius;
     }
-    public void display(){
-        System.out.println("this is a" +super.color + " " + "circle");
-    }
+
 }
